@@ -112,7 +112,7 @@ export function LoginModal() {
             {step === "name" && "Almost there!"}
           </DialogTitle>
           <DialogDescription className="mt-1 text-sm text-primary-foreground/80">
-            {step === "details" && "Enter your email and phone to continue."}
+            {step === "details" && "Login or sign up with email and phone."}
             {step === "otp" && `Enter the code we sent to ${email.trim()}.`}
             {step === "name" && "What should we call you?"}
           </DialogDescription>
@@ -159,7 +159,8 @@ export function LoginModal() {
               </div>
               <SubmitButton loading={loading} label="Continue" />
               <p className="text-center text-xs text-muted-foreground">
-                We&apos;ll email a one-time code. Your phone helps us reach you about bookings.
+                We&apos;ll email a one-time code. New here? This creates your account. Returning?
+                Same steps to log in.
               </p>
             </form>
           )}
