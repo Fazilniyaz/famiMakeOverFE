@@ -48,11 +48,11 @@ export function Logo({
   showMark?: boolean
 }) {
   return (
-    <Link href={href} className={cn("group inline-flex items-center gap-2.5", className)}>
+    <Link href={href} className={cn("group inline-flex min-w-0 items-center gap-1.5 sm:gap-2.5", className)}>
       {showMark && (
-        <BrandMark className="h-8 w-8 text-primary fmo-transition group-hover:rotate-6" />
+        <BrandMark className="h-7 w-7 flex-shrink-0 text-primary fmo-transition group-hover:rotate-6 sm:h-8 sm:w-8" />
       )}
-      <span className="font-serif text-2xl leading-none tracking-wide text-foreground">
+      <span className="truncate font-serif text-lg leading-none tracking-wide text-foreground sm:text-2xl">
         Fami<span className="italic text-primary">MakeOver</span>
       </span>
     </Link>

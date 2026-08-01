@@ -53,24 +53,24 @@ export function Header() {
   }
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4">
+    <header className="fixed left-0 right-0 top-0 z-50 px-2 pt-2 sm:px-4 sm:pt-4">
       <nav
-        className="animate-scale-fade-in mx-auto max-w-7xl rounded-2xl border border-white/40 bg-white/50 px-5 py-0 backdrop-blur-md lg:px-8"
+        className="animate-scale-fade-in mx-auto max-w-7xl rounded-2xl border border-white/40 bg-white/50 px-2 py-0 backdrop-blur-md sm:px-5 lg:px-8"
         style={{ boxShadow: "rgba(0, 0, 0, 0.08) 0px 10px 40px" }}
       >
-        <div className="flex h-[68px] items-center justify-between gap-4">
+        <div className="flex h-14 items-center justify-between gap-2 sm:h-[68px] sm:gap-4">
           {/* Left — brand + nav */}
-          <div className="flex min-w-0 items-center gap-3 lg:gap-8">
+          <div className="flex min-w-0 flex-1 items-center gap-1 sm:gap-3 lg:gap-8">
             <button
               type="button"
-              className="p-2 text-foreground/80 hover:text-foreground fmo-transition lg:hidden"
+              className="flex-shrink-0 p-1.5 text-foreground/80 hover:text-foreground fmo-transition sm:p-2 lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
 
-            <Logo className="flex-shrink-0" />
+            <Logo className="min-w-0" />
 
             <div className="hidden items-center gap-6 xl:gap-7 lg:flex">
               {navLinks.map((link) => (
@@ -86,11 +86,11 @@ export function Header() {
           </div>
 
           {/* Right — actions */}
-          <div className="flex flex-shrink-0 items-center gap-1 sm:gap-2">
+          <div className="flex flex-shrink-0 items-center gap-0.5 sm:gap-2">
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="p-2 text-foreground/70 hover:text-foreground fmo-transition"
+              className="p-1.5 text-foreground/70 hover:text-foreground fmo-transition sm:p-2"
               aria-label="Search"
             >
               <Search className="h-5 w-5" />
